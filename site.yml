@@ -2,7 +2,6 @@
 - name: Configure laptop
   hosts:
     - all
-      #connection: local
 
   roles:
       #- crivetimihai.anaconda
@@ -10,6 +9,12 @@
     - role: crivetimihai.bootstrap
       become: yes
         #- crivetimihai.docker
-        #- crivetimihai.dotfiles
         # - crivetimihai.hashicorp
         # - crivetimihai.kvm
+    - role: geerlingguy.dotfiles
+
+  tasks:
+    - name: source bashrc.d in bashrc
+      lineinfile:
+        path: ~/.bashrc
+        line: "[ -f ~/.bashrc.d/bashrc.init ] && source ~/.bashrc.d/bashrc.init"
