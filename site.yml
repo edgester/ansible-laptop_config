@@ -1,0 +1,15 @@
+---
+- name: Configure laptop
+  hosts:
+    - all
+      #connection: local
+
+  roles:
+      #- crivetimihai.anaconda
+    - edgester.flatpak
+    - role: crivetimihai.bootstrap
+      become: yes
+        #- crivetimihai.docker
+        #- crivetimihai.dotfiles
+        # - crivetimihai.hashicorp
+        # - crivetimihai.kvm

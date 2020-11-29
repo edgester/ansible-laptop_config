@@ -1,0 +1,35 @@
+---
+roles:
+  - src: crivetimihai.anaconda
+  - src: crivetimihai.apache
+  - src: crivetimihai.atom
+  - src: crivetimihai.bootstrap
+  - src: crivetimihai.cockpit
+  - src: crivetimihai.docker
+  - src: crivetimihai.dotfiles
+  - src: https://github.com/edgester/flatpak.git
+    version: master
+    scm: git
+    name: edgester.flatpak
+  - src: crivetimihai.haproxy
+  - src: crivetimihai.hashicorp
+  - src: crivetimihai.jenkins
+  - src: crivetimihai.kvm
+  - src: crivetimihai.localbin
+  - src: crivetimihai.pip
+  - src: crivetimihai.podman
+  - src: crivetimihai.users
+  - src: crivetimihai.virtualbox
+  - src: crivetimihai.vscode
+  - src: crivetimihai.vsftpd
+  - src: crivetimihai.xrdp
+    #  - src: https://github.com/devopstoolbox/laptop
+    #version: master
+    #name: devops-toolbox.laptop
+
+collections:
+  - name: crivetimihai.development
+  - name: crivetimihai.server
+  - name: crivetimihai.virtualization
+  - name: crivetimihai.workstation
+  - name: community.general

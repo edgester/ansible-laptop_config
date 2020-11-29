@@ -1,0 +1,5 @@
+flatpak_method: system
+flatpak_packages:
+  - io.neovim.nvim
+  - org.kiwix.desktop 
+  - org.zealdocs.Zeal
