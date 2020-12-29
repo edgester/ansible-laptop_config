@@ -14,10 +14,9 @@ Download the git repo:
     git clone https://github.com/edgester/ansible-laptop_config.git
     cd ansible-laptop_config
 
- Install the ansible collections and roles:
+Install the ansible collections and roles:
 
-    ansible-galaxy collection install -r requirements.yml
-    ansible-galaxy install -r requirements.yml --roles-path roles
+   ./pre-flight
 
 Edit group_vars/all.yml to suit your needs. Be sure to change the following
 variables:
@@ -29,4 +28,4 @@ variables:
 
 Run it:
 
-    ansible-playbook site.yml  -i localhost, --connection=local --ask-become-pass
+  ./run
