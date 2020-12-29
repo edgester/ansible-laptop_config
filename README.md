@@ -16,8 +16,8 @@ Download the git repo:
 
  Install the ansible collections and roles:
 
-    ansible-galaxy collection install -r requirements.yml 
-    ansible-galaxy install -r requirements.yml 
+    ansible-galaxy collection install -r requirements.yml
+    ansible-galaxy install -r requirements.yml --roles-path roles
 
 Edit group_vars/all.yml to suit your needs. Be sure to change the following
 variables:
