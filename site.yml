@@ -3,6 +3,12 @@
   hosts:
     - all
 
+  pre_tasks:
+    - name: Update apt cache if needed
+      apt:
+        cache_valid_time: 3600
+      become: yes
+
   roles:
       #- crivetimihai.anaconda
     - edgester.flatpak
