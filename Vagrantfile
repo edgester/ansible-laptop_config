@@ -62,6 +62,8 @@ Vagrant.configure("2") do |config|
     # Enable KVM nested virtualization
     libvirt.nested = true
     libvirt.cpu_mode = "host-passthrough"
+
+    libvirt.volume_cache = 'unsafe'
   end
 
   # View the documentation for the provider you are using for more
