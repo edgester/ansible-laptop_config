@@ -27,6 +27,8 @@ roles:
     #version: master
     #name: devops-toolbox.laptop
   - src: geerlingguy.dotfiles
+  - src: webarchitect609.skype
+    name: skype
 
 collections:
   - name: crivetimihai.development

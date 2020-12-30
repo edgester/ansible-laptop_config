@@ -18,6 +18,8 @@
         # - crivetimihai.hashicorp
         # - crivetimihai.kvm
     - role: geerlingguy.dotfiles
+    - role: skype
+      become: yes
 
   tasks:
     - name: source bashrc.d in bashrc
