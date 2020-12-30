@@ -8,4 +8,4 @@ export PATH="/usr/local/bin:${PATH}"
 if [ -z "${ANSIBLE_BECOME_PASS}" ]; then
   OPTIONS="--ask-become-pass"
 fi
-ansible-playbook site.yml  ${OPTIONS} "$@"
+ansible-playbook --connection=local site.yml  ${OPTIONS} "$@"
