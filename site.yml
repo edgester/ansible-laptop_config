@@ -30,18 +30,24 @@
         path: ~/.bashrc
         line: "[ -f ~/.bashrc.d/bashrc.init ] && source ~/.bashrc.d/bashrc.init"
 
+    - name: Add obs studio PPA and key
+      apt_repository:
+        repo: ppa:obsproject/obs-studio
+
     - name: Install apt packages
       apt:
         name: "{{ item }}"
         state: present
       become: true
       loop:
+        - ffmpeg
         - fonts-powerline
         - fzf
         - git
         - git-lfs
         - golang
         - jq
+        - obs-studio
         - rclone
         - snapd
         - thunderbird
