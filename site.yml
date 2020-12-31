@@ -36,8 +36,12 @@
         state: present
       become: true
       loop:
+        - fonts-powerline
+        - fzf
+        - git
         - golang
         - jq
         - rclone
-        - thunderbird
         - snapd
+        - thunderbird
+        - vim
