@@ -39,6 +39,7 @@
         - fonts-powerline
         - fzf
         - git
+        - git-lfs
         - golang
         - jq
         - rclone
