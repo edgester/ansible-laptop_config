@@ -16,6 +16,8 @@
     - role: geerlingguy.dotfiles
     - role: skype
       become: yes
+    - role: elreydetoda.virtualization.kvm
+      become: yes
 
   tasks:
     - name: Install github cli
@@ -29,6 +31,7 @@
     - name: Add obs studio PPA and key
       apt_repository:
         repo: ppa:obsproject/obs-studio
+      become: yes
 
     - name: Install apt packages
       apt:
