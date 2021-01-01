@@ -10,13 +10,9 @@
       become: yes
 
   roles:
-      #- crivetimihai.anaconda
     - edgester.flatpak
     - role: crivetimihai.bootstrap
       become: yes
-        #- crivetimihai.docker
-        # - crivetimihai.hashicorp
-        # - crivetimihai.kvm
     - role: geerlingguy.dotfiles
     - role: skype
       become: yes
