@@ -18,6 +18,8 @@
       become: yes
     - role: elreydetoda.virtualization.kvm
       become: yes
+    - role: signal-desktop
+      become: yes
 
   tasks:
     - name: Install github cli

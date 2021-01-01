@@ -9,6 +9,8 @@ roles:
   - src: geerlingguy.dotfiles
   - src: webarchitect609.skype
     name: skype
+  - src: freedomofpress.signal-desktop
+    name: signal-desktop
 
 collections:
   - name: elreydetoda.virtualization
