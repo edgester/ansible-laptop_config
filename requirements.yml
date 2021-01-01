@@ -33,6 +33,6 @@ roles:
 collections:
   - name: crivetimihai.development
   - name: crivetimihai.server
-  - name: crivetimihai.virtualization
   - name: crivetimihai.workstation
+  - name: elreydetoda.virtualization
   - name: community.general
