@@ -47,4 +47,5 @@
         - rclone
         - snapd
         - thunderbird
+        - tig
         - vim
