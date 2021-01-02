@@ -11,6 +11,10 @@ roles:
     name: skype
   - src: freedomofpress.signal-desktop
     name: signal-desktop
+  - src: https://github.com/edgester/ansible-role-vagrant_libvirt.git
+    version: main
+    scm: git
+    name: vagrant_libvirt
 
 collections:
   - name: elreydetoda.virtualization

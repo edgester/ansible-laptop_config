@@ -3,6 +3,9 @@
   hosts:
     - all
 
+  vars:
+    vagrant_version: 2.2.14
+
   pre_tasks:
     - name: Update apt cache if needed
       apt:
@@ -16,10 +19,13 @@
     - role: geerlingguy.dotfiles
     - role: skype
       become: yes
-    - role: elreydetoda.virtualization.kvm
-      become: yes
     - role: signal-desktop
       become: yes
+    - role: elreydetoda.virtualization.kvm
+      become: yes
+    - role: elreydetoda.virtualization.vagrant
+      become: yes
+    - vagrant_libvirt
 
   tasks:
     - name: Install github cli
