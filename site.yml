@@ -39,20 +39,19 @@
 
     - name: Install apt packages
       apt:
-        name: "{{ item }}"
+        name:
+          - ffmpeg
+          - fonts-powerline
+          - fzf
+          - git
+          - git-lfs
+          - golang
+          - jq
+          - obs-studio
+          - rclone
+          - snapd
+          - thunderbird
+          - tig
+          - vim
         state: present
       become: true
-      loop:
-        - ffmpeg
-        - fonts-powerline
-        - fzf
-        - git
-        - git-lfs
-        - golang
-        - jq
-        - obs-studio
-        - rclone
-        - snapd
-        - thunderbird
-        - tig
-        - vim
