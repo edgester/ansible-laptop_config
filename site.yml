@@ -40,6 +40,7 @@
     - name: Install apt packages
       apt:
         name:
+          - ansible
           - ffmpeg
           - fonts-powerline
           - fzf
@@ -55,3 +56,11 @@
           - vim
         state: present
       become: true
+
+    - name: Run dotfiles run script
+      command: ~/dotfiles/run
+      register: dotfiles_run
+
+    - name: ~/dotfiles/run output
+      debug:
+        var: dotfiles_run.stdout_lines
