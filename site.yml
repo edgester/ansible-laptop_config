@@ -21,6 +21,8 @@
       become: yes
     - role: signal-desktop
       become: yes
+    - elreydetoda.virtualization.kvm
+    - elreydetoda.virtualization.vagrant
     - vagrant_libvirt
 
   tasks:
