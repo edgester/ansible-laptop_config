@@ -11,6 +11,11 @@
       apt:
         cache_valid_time: 3600
       become: yes
+    - name: Install pre-requisite packages
+      apt:
+        name:
+          - git
+      become: true
 
   roles:
     - edgester.flatpak
