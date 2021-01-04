@@ -58,9 +58,12 @@
           - obs-studio
           - rclone
           - snapd
+          - spice-client-gtk
           - thunderbird
           - tig
           - vim
+          - virt-manager
+          - virt-viewer
         state: present
       become: true
 
