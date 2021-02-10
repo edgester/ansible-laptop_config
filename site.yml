@@ -55,6 +55,7 @@
           - git-lfs
           - golang
           - jq
+          - libreoffice
           - obs-studio
           - rclone
           - snapd
