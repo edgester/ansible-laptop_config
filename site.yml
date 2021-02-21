@@ -7,15 +7,19 @@
     vagrant_version: 2.2.14
 
   pre_tasks:
+
     - name: Update apt cache if needed
       apt:
         cache_valid_time: 3600
       become: yes
+      when: ansible_os_family|lower == 'debian'
+
     - name: Install pre-requisite packages
       apt:
         name:
           - git
       become: true
+      when: ansible_os_family|lower == 'debian'
 
   roles:
     - edgester.flatpak
@@ -67,6 +71,7 @@
           - virt-viewer
         state: present
       become: true
+      when: ansible_os_family|lower == 'debian'
 
     - name: Run dotfiles run script
       command: ~/dotfiles/run
