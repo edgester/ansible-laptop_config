@@ -15,24 +15,35 @@
       when: ansible_os_family|lower == 'debian'
 
     - name: Install pre-requisite packages
-      apt:
+      package:
         name:
           - git
       become: true
-      when: ansible_os_family|lower == 'debian'
 
   roles:
     - edgester.flatpak
+
     - role: crivetimihai.bootstrap
       become: yes
+
     - role: geerlingguy.dotfiles
+
     - role: skype
+      when: ansible_os_family|lower == 'debian'
       become: yes
+
     - role: signal-desktop
       become: yes
-    - elreydetoda.virtualization.kvm
-    - elreydetoda.virtualization.vagrant
-    - vagrant_libvirt
+      when: ansible_os_family|lower == 'debian'
+
+    - role: elreydetoda.virtualization.kvm
+      when: ansible_os_family|lower == 'debian'
+
+    - role: elreydetoda.virtualization.vagrant
+      when: ansible_os_family|lower == 'debian'
+
+    - role: vagrant_libvirt
+      when: ansible_os_family|lower == 'debian'
 
   tasks:
     - name: Install github cli
@@ -47,30 +58,36 @@
       apt_repository:
         repo: ppa:obsproject/obs-studio
       become: yes
+      when: ansible_os_family|lower == 'debian'
 
-    - name: Install apt packages
-      apt:
+    - name: Install OS packages
+      package:
         name:
           - ansible
-          - ffmpeg
-          - fonts-powerline
-          - fzf
           - git
           - git-lfs
           - golang
           - jq
-          - libreoffice
-          - obs-studio
           - rclone
           - snapd
-          - spice-client-gtk
           - thunderbird
           - tig
-          - vim
           - virt-manager
           - virt-viewer
+      become: yes
+
+    - name: Install apt packages
+      apt:
+        name:
+          - ffmpeg
+          - fonts-powerline
+          - fzf
+          - libreoffice
+          - obs-studio
+          - spice-client-gtk
+          - vim
         state: present
-      become: true
+      become: yes
       when: ansible_os_family|lower == 'debian'
 
     - name: Run dotfiles run script
