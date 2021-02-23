@@ -1,18 +1,16 @@
 ---
-- name: Add gh apt key
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: C99B11DEB97541F0
+- block:
+  - name: Add gh apt key
+    apt_key:
+      keyserver: keyserver.ubuntu.com
+      id: C99B11DEB97541F0
+  - name: Add github cli apt repo
+    apt_repository:
+      repo: "deb https://cli.github.com/packages {{ ansible_distribution_release }} main"
+      state: present
+  - name: Install gh
+    apt:
+      name: gh
+      state: present
   become: yes
-
-- name: Add github cli apt repo
-  apt_repository:
-    repo: "deb https://cli.github.com/packages {{ ansible_distribution_release }} main"
-    state: present
-  become: yes
-
-- name: Install gh
-  apt:
-    name: gh
-    state: present
-  become: yes
+  when: ansible_os_family|lower == 'debian'
