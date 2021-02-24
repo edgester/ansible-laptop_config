@@ -8,6 +8,17 @@
 
   pre_tasks:
 
+    - name: Load OS variables
+      include_vars: "{{ lookup('first_found', params) }}"
+      vars:
+        params:
+          files:
+            - "{{ansible_distribution|lower}}.yml"
+            - "{{ansible_os_family|lower}}.yml"
+            - default.yaml
+          paths:
+            - 'vars'
+
     - name: Update apt cache if needed
       apt:
         cache_valid_time: 3600
@@ -62,33 +73,9 @@
 
     - name: Install OS packages
       package:
-        name:
-          - ansible
-          - git
-          - git-lfs
-          - golang
-          - jq
-          - rclone
-          - snapd
-          - thunderbird
-          - tig
-          - virt-manager
-          - virt-viewer
-      become: yes
-
-    - name: Install apt packages
-      apt:
-        name:
-          - ffmpeg
-          - fonts-powerline
-          - fzf
-          - libreoffice
-          - obs-studio
-          - spice-client-gtk
-          - vim
+        name: "{{ package_list }}"
         state: present
       become: yes
-      when: ansible_os_family|lower == 'debian'
 
     - name: Run dotfiles run script
       command: ~/dotfiles/run

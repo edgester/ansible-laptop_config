@@ -1,0 +1,13 @@
+---
+package_list:
+  - ansible
+  - git
+  - git-lfs
+  - golang
+  - jq
+  - rclone
+  - snapd
+  - thunderbird
+  - tig
+  - virt-manager
+  - virt-viewer

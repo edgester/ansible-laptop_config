@@ -1,0 +1,20 @@
+---
+package_list:
+  - ansible
+  - ffmpeg
+  - fonts-powerline
+  - fzf
+  - git
+  - git-lfs
+  - golang
+  - jq
+  - libreoffice
+  - obs-studio
+  - rclone
+  - snapd
+  - spice-client-gtk
+  - thunderbird
+  - tig
+  - vim
+  - virt-manager
+  - virt-viewer
