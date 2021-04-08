@@ -6,6 +6,7 @@ dotfiles_home: "~"
 dotfiles_files:
   - .bashrc.d
   - .gitignore
+  - .inputrc
   - .vimrc
 flatpak_method: system
 flatpak_packages:
