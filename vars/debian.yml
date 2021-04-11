@@ -18,3 +18,4 @@ package_list:
   - vim
   - virt-manager
   - virt-viewer
+  - webext-browserpass
