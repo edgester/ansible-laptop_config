@@ -5,6 +5,7 @@ package_list:
   - git-lfs
   - golang
   - jq
+  - pandoc
   - rclone
   - snapd
   - thunderbird
