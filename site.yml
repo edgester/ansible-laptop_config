@@ -41,6 +41,7 @@
       become: yes
 
     - role: geerlingguy.dotfiles
+      tags: [ dotfiles ]
 
     - role: skype
       when: ansible_os_family|lower == 'debian'
