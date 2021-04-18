@@ -55,14 +55,6 @@
       when: ansible_os_family|lower == 'debian'
 
   tasks:
-    - name: Install github cli
-      include_tasks: gh_cli.yml
-
-    - name: source bashrc.d in bashrc
-      lineinfile:
-        path: ~/.bashrc
-        line: "[ -f ~/.bashrc.d/bashrc.init ] && source ~/.bashrc.d/bashrc.init"
-
     - name: Add obs studio PPA and key
       apt_repository:
         repo: ppa:obsproject/obs-studio
