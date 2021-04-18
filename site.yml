@@ -40,6 +40,8 @@
     - role: crivetimihai.bootstrap
       become: yes
 
+    - role: geerlingguy.dotfiles
+
     - role: skype
       when: ansible_os_family|lower == 'debian'
       become: yes
