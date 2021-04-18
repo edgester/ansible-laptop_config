@@ -73,6 +73,16 @@
         state: present
       become: yes
 
+    - name: Run dotfiles pre-flight script
+      command: ~/dotfiles/pre-flight
+      register: dotfiles_preflight
+      tags: [ dotfiles ]
+
+    - name: ~/dotfiles/pre-flight output
+      debug:
+        var: dotfiles_preflight.stdout_lines
+      tags: [ dotfiles ]
+
     - name: Run dotfiles run script
       command: ~/dotfiles/run
       register: dotfiles_run
