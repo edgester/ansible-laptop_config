@@ -18,18 +18,21 @@
             - default.yaml
           paths:
             - 'vars'
+      tags: [ always ]
 
     - name: Update apt cache if needed
       apt:
         cache_valid_time: 3600
       become: yes
       when: ansible_os_family|lower == 'debian'
+      tags: [ always ]
 
     - name: Install pre-requisite packages
       package:
         name:
           - git
       become: true
+      tags: [ always ]
 
   roles:
     - edgester.flatpak
@@ -70,7 +73,9 @@
     - name: Run dotfiles run script
       command: ~/dotfiles/run
       register: dotfiles_run
+      tags: [ dotfiles ]
 
     - name: ~/dotfiles/run output
       debug:
         var: dotfiles_run.stdout_lines
+      tags: [ dotfiles ]
