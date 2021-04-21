@@ -1,4 +1,7 @@
 # ansible-laptop_config
+
+[![Lint](https://github.com/edgester/ansible-laptop_config/actions/workflows/lint.yaml/badge.svg)](https://github.com/edgester/ansible-laptop_config/actions/workflows/lint.yaml)
+
 ansible playbook to configure my personal environment
 
 This is an ansible playbook that configures my personal Linux environment.
