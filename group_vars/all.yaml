@@ -1,3 +1,4 @@
+---
 dotfiles_repo: "https://github.com/edgester/dotfiles.git"
 dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
@@ -10,5 +11,5 @@ dotfiles_files:
   - .vimrc
 flatpak_method: system
 flatpak_packages:
-  - org.kiwix.desktop 
+  - org.kiwix.desktop
   - org.zealdocs.Zeal

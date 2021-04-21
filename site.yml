@@ -18,21 +18,21 @@
             - default.yaml
           paths:
             - 'vars'
-      tags: [ always ]
+      tags: [always]
 
     - name: Update apt cache if needed
       apt:
         cache_valid_time: 3600
       become: yes
       when: ansible_os_family|lower == 'debian'
-      tags: [ always ]
+      tags: [always]
 
     - name: Install pre-requisite packages
       package:
         name:
           - git
       become: true
-      tags: [ always ]
+      tags: [always]
 
   roles:
     - edgester.flatpak
@@ -41,7 +41,7 @@
       become: yes
 
     - role: geerlingguy.dotfiles
-      tags: [ dotfiles ]
+      tags: [dotfiles]
 
     - role: skype
       when: ansible_os_family|lower == 'debian'
@@ -76,19 +76,19 @@
     - name: Run dotfiles pre-flight script
       command: ~/dotfiles/pre-flight
       register: dotfiles_preflight
-      tags: [ dotfiles ]
+      tags: [dotfiles]
 
     - name: ~/dotfiles/pre-flight output
       debug:
         var: dotfiles_preflight.stdout_lines
-      tags: [ dotfiles ]
+      tags: [dotfiles]
 
     - name: Run dotfiles run script
       command: ~/dotfiles/run
       register: dotfiles_run
-      tags: [ dotfiles ]
+      tags: [dotfiles]
 
     - name: ~/dotfiles/run output
       debug:
         var: dotfiles_run.stdout_lines
-      tags: [ dotfiles ]
+      tags: [dotfiles]
