@@ -12,6 +12,7 @@ package_list:
   - obs-studio
   - pandoc
   - rclone
+  - scrot
   - snapd
   - spice-client-gtk
   - thunderbird
