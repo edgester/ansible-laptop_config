@@ -22,3 +22,4 @@ package_list:
   - virt-viewer
   - webext-browserpass
   - xclip
+  - zathura
