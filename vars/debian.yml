@@ -2,6 +2,7 @@
 package_list:
   - ansible
   - ffmpeg
+  - fonts-noto-color-emoji
   - fonts-powerline
   - fzf
   - git
