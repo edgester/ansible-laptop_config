@@ -2,6 +2,7 @@
 package_list:
   - ansible
   - entr
+  - exuberant-ctags
   - ffmpeg
   - fonts-noto-color-emoji
   - fonts-powerline
