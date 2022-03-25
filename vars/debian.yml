@@ -15,6 +15,7 @@ package_list:
   - obs-studio
   - pandoc
   - rclone
+  - redshift
   - scrot
   - snapd
   - spice-client-gtk
