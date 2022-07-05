@@ -67,6 +67,19 @@
       become: yes
       when: ansible_os_family|lower == 'debian'
 
+    - name: Check if powertools is enabled
+      ansible.builtin.shell: "dnf repolist | grep -qs powertools"
+      failed_when: false
+      when: ansible_os_family|lower == 'redhat'
+      register: dnf_powertools
+
+    - name: Enable powertools repo on Red Hat family
+      ansible.builtin.command: "dnf config-manager --set-enabled powertools"
+      become: yes
+      when:
+        - dnf_powertools.rc != 0
+        - ansible_os_family|lower == 'redhat'
+
     - name: Install OS packages
       package:
         name: "{{ package_list }}"
