@@ -8,8 +8,8 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.box = "generic/ubuntu2004"
   end
 
-  config.vm.define "centos" do |centos|
-    centos.vm.box = "generic/centos8"
+  config.vm.define "rocky" do |rocky|
+    rocky.vm.box = "generic/rocky8"
   end
 
   config.vm.provider :libvirt do |libvirt|
