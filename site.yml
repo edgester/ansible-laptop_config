@@ -77,8 +77,8 @@
       ansible.builtin.command: "dnf config-manager --set-enabled powertools"
       become: yes
       when:
-        - dnf_powertools.rc != 0
         - ansible_os_family|lower == 'redhat'
+        - dnf_powertools.rc != 0
 
     - name: Install OS packages
       package:
