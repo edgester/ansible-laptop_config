@@ -11,7 +11,17 @@ package_list:
   - git-lfs
   - golang
   - jq
+  - libbz2-dev
+  - libffi-dev
+  - liblzma-dev
+  - libncursesw5-dev
+  - libreadline-dev
   - libreoffice
+  - libsqlite3-dev
+  - libssl-dev
+  - libxml2-dev
+  - libxmlsec1-dev
+  - llvm
   - obs-studio
   - pandoc
   - rclone
@@ -21,9 +31,11 @@ package_list:
   - spice-client-gtk
   - thunderbird
   - tig
+  - tk-dev
   - vim
   - virt-manager
   - virt-viewer
   - webext-browserpass
   - xclip
   - zathura
+  - zlib1g-dev
