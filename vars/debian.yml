@@ -2,6 +2,7 @@
 package_list:
   - ansible
   - entr
+  - environment-modules
   - exuberant-ctags
   - ffmpeg
   - fonts-noto-color-emoji

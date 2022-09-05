@@ -2,6 +2,7 @@
 package_list:
   - ansible
   - bzip2-devel
+  - environment-modules
   - gcc
   - git
   - git-lfs
