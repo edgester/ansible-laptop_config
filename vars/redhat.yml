@@ -1,28 +1,27 @@
 ---
 package_list:
   - ansible
+  - bzip2-devel
   - gcc
   - git
   - git-lfs
   - golang
   - jq
-  - libbz2-dev
-  - libffi-dev
-  - liblzma-dev
-  - libncursesw5-dev
-  - libreadline-dev
-  - libsqlite3-dev
-  - libssl-dev
-  - libxml2-dev
-  - libxmlsec1-dev
+  - libffi
+  - libxml2-devel
   - llvm
+  - ncurses-devel
+  - openssl-devel
   - pandoc
   - rclone
+  - readline-devel
   - snapd
+  - sqlite-devel
   - thunderbird
   - tig
-  - tk-dev
+  - tk-devel
   - virt-manager
   - virt-viewer
+  - xmlsec1-devel
+  - xz-devel
   - zlib-devel
-  - zlib1g-dev
