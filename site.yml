@@ -69,6 +69,7 @@
 
     - name: Check if powertools is enabled
       ansible.builtin.shell: "dnf repolist | grep -qs powertools"
+      changed_when: false
       failed_when: false
       when: ansible_os_family|lower == 'redhat'
       register: dnf_powertools
